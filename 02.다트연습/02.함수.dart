@@ -49,7 +49,7 @@ japanShip((){print('개박살 일본배 침몰');});
 
 
 // 람다함수 연습
-showTxt('"아직 신에게는 12척의 배가 남았습니다"  이 대사가 나오는 이순인의 전투는  ${leeFight[0]}');
+showTxt('"아직 신에게는 12척의 배가 남았습니다"  이 대사가 나오는 이순인의 전투는  ${retVal(leeFight[0])}');
 showTxt("아직 신에게는 ${minus()}척의 배가 남았습니다");
 showTxt("아직 신에게는 ${minus()}척의 배가 남았습니다");
 showTxt("아직 신에게는 ${minus()}척의 배가 남았습니다");
@@ -59,16 +59,46 @@ showTxt("아직 신에게는 ${minus()}척의 배가 남았습니다");
 
 showTxt('이순신의 부하 중 이순신이 있었다. 그는 전투전에 너무 긴장되어서 구구단을 외웄다. 9단');
 
+//구구단출력
+gugu(9);
 
+showTxt('7단');
+//구구단출력
+gugu(7);
 
 // 다음 추가 이순신 시리즈가 있다면 어느배우를 추천하는가?
 showTxt('다음 이순신 시리즈가 있다면 추천배우는 공유다');
 showTxt('공유의 취미는 ${recommActor['공유']?['취미']}다. 사는곳은 ${recommActor['공유']?['사는곳']}다 공유의 자동차는${recommActor['공유']?['자동차']??"정보없음"}');
 
+
+
+
+
 } ///// main /////////////////////////////////////////////
 
-int gugudan = 1;
-Function times = () => 
+//구구단 함수
+
+void gugu (int x) {
+  //9단일 때 아이콘 다름, 나머진 같음
+  String icon = "";
+
+  if(x==9) {
+    icon ="🥞";
+  }
+  else{
+    icon="🍟";
+  }
+  print('$icon$x 단');
+  //for문
+  for(int i=1; i<=9; i++){
+
+    print("$x × $i ＝ ${x*i}");
+
+  } /// for /////
+   
+
+}
+
 
 
 int shipNum = 13;
@@ -86,12 +116,20 @@ void japanShip(Function bomb){
 
 
 // 추천배우 변수
-const recommActor = {
+const Map<String,Map> recommActor = {
+// const recommActor = {
   '조인성':{'나이':42, '취미':'날기','사는곳':'아무데나'},
   '공유':{'나이':45, '취미':'비오게함','사는곳':'공유집'}
 };
 
 
+// 이순신 전투 뒷말셋팅 함수
+// 결과리턴값의 형을 생각한다
+String retVal (String x){  
+  return "$x${x=='한산'?'도대첩':'해전'}";
+  // 3항연산자 -> 조건문?코드1:코드2
+  // 조건이 true이면 코드1, flase이면 코드2
+}
 
 
 
