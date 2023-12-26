@@ -6,4 +6,6 @@
 
 
 
-node.js LTS 깔려있지 않으면 코드러너 출력 안보임
+node.js (LTS) 깔려있지 않으면 코드러너 출력 안보임
+설정 확장에서
++ run in terminal 에 체크
