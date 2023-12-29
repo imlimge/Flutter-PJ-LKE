@@ -29,14 +29,27 @@ class RecipePage extends StatelessWidget {
     return Scaffold(
       // 전체 배경색 설정하기
       backgroundColor: Colors.white,
-      // 2. 앱바클래스 호출하기
+      // 2. 앱바구현 메서드 호출하기
       appBar: _buildRecipeAppBar(),
       // 3. body 구현하기
-      body: Column(
-        children: [
-          // 레시피 페이지 전체 타이틀
-          RecipeTitle(),
-        ],)
+      body: Padding(
+        // 상하좌우 대칭 여백 패딩설정(symmetric : 대칭적인)
+        // symmetric(horizontal:숫자, vertical:숫자)
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        // Column 위젯대신 ListView 위젯을 사용해야 스크롤바 표시가 된다
+        // child: Column(
+        child: ListView(
+          children: [
+            // 1. 레시피 페이지 전체 타이틀
+            RecipeTitle(),
+            // 2. 레시피 페이지 메뉴
+            RecipeMenu(),
+            // 3. 레시피 이미지타이틀
+            RecipeListItem('coffee', '커피 레시피'),
+            RecipeListItem('burger', '버거 레시피'),
+            RecipeListItem('pizza', '피자 레시피'),
+          ],),
+      )
     );
   }
 }
@@ -65,7 +78,8 @@ AppBar _buildRecipeAppBar(){
       Icon(
         CupertinoIcons.heart,
         color: Colors.red[200],
-      )
+      ),
+      SizedBox(width: 15,),
     ],
 
   );
