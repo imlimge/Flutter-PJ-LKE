@@ -27,7 +27,7 @@ const MaterialColor primaryWhite = MaterialColor(
 // 테마 데이터를 리턴하는 함수를 만들자
 ThemeData theme(){
   return ThemeData(
-    // 앱의 전체 테마 스와치(색상모듬 지정)
+    // 앱의 전체 테마 스와치(색상모음 지정)
     primarySwatch: primaryWhite,
     // 상단의 앱바의 테마도 여기서 지정가능(여기선 아이콘색을 파란색으로 지정함)
     appBarTheme: AppBarTheme(

@@ -25,7 +25,6 @@ class ProfileHeader extends StatelessWidget {
 
 
 // 아바타 이미지 위젯 함수 ///////
-
 Widget _buildHeaderAvatar(){
   // 크기를 가지는 박스 위젯은 SizedBox()
   return SizedBox(
