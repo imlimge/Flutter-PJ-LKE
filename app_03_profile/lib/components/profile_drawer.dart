@@ -16,7 +16,8 @@ class ProfileDrawer extends StatelessWidget {
       // 높이값 double.infinity는 높이 채우기
       height: double.infinity,
       // 박스 배경색
-      color: Colors.teal[200],
+      color: Colors.blue,
+      
       
     );
   }
