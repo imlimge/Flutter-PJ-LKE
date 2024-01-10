@@ -29,7 +29,7 @@ class RecipeListItem extends StatelessWidget {
             child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Image.asset(
-                  "images/$imageName.jpeg",
+                  "assets/images/$imageName.jpeg",
                   // 이미지 확장 채우기
                   fit: BoxFit.cover,
             ),
