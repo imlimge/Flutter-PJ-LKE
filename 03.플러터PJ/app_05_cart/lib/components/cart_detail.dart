@@ -238,6 +238,7 @@ Widget _buildStarReview(){
 Widget _buildOption(){
   return Padding(padding: const EdgeInsets.only(bottom: 20.0),
   child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
     children:[
       Text("Color Options"),
       SizedBox(height: 10),
